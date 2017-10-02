@@ -1,0 +1,20 @@
+.searchText{
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.label{
+    font-size: 1.6rem;
+    margin: auto;
+    text-align: center
+}
+.wrapperLabel{
+    margin: auto;
+}
+.find{
+    height: 100px;
+}
+.card{
+    border:none;
+    border-bottom: 2px groove black;
+    border-radius:unset;
+}
