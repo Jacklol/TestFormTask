@@ -1,0 +1,22 @@
+<form [formGroup]="textForm" (ngSubmit)="submit($event)">
+    <div class="form-group row align-items-center find">
+      <div class="col-sm-3 wrapperLabel" >
+        <label  class="label" for="exitPrice">I'm looking for</label>
+      </div>
+      <div class="col-sm-6 mr-auto">
+        <input 
+        formControlName="exitPrice"
+        id="exitPrice"
+        type="text"
+        class="form-control"> 
+      </div>
+      <div class="col-sm-2">
+        <button   type="submit" class="btn btn-secondary button"><i class="fa fa-search" fa-2x>&nbsp; </i>  Find</button>
+      </div>  
+    </div>
+    <div class="alert alert-danger" *ngIf="(exitPrice.touched && exitPrice.invalid) || (submitting && !exitPrice.dirty)">
+      <div *ngIf="exitPrice.errors.required">field can't be empty</div>
+      <div *ngIf="exitPrice.errors.minlength">min 2 simbols</div>
+      <div *ngIf="exitPrice.errors.maxlength">max 100 simbols</div>
+    </div>
+  </form>

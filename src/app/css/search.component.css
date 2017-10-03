@@ -1,0 +1,18 @@
+
+.label{
+    font-size: 1.6rem;
+    margin: auto;
+    text-align: center
+}
+.wrapperLabel{
+    margin: auto;
+}
+.find{
+    height: 100px;
+}
+
+@media (max-width: 300px) {
+    .label{
+     display: none;
+    }
+  }

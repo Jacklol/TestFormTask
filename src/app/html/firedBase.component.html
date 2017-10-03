@@ -1,0 +1,14 @@
+<h2> Search history - {{(items | async)?.length}} request(s)</h2>
+<div *ngFor="let item of items | async">
+  <div  class="container">
+    <div  class="cardx row align-items-center">
+      <div class="col-sm-9  col-md-10">
+        <div>{{ item.date | date: 'dd/MM/yyyy HH:mm'}}</div>
+        <div class="searchText">Search request: &nbsp; {{ item.text}}</div>
+      </div>
+      <div class="col-sm-3 col-md-2">
+        <button type="button" class="btn btn-secondary" (click)="deleteItem(item.$key)" ><i class="fa fa-minus-square">&nbsp; </i>&nbsp; Delete</button>
+      </div>
+    </div> 
+  </div> 
+</div>   

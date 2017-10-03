@@ -1,0 +1,10 @@
+.cardx{
+    min-height: 100px;   
+    border-bottom: 2px groove black;
+    border-radius:unset;
+}
+.searchText{
+    font-weight: 500;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+}

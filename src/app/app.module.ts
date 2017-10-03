@@ -7,10 +7,15 @@ import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
+import { SearchComponent } from './search.component';
+import { FirebaseComponent } from './firedBase.component';
+import { DataBaseService } from './dataBaseService';    
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    FirebaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,7 @@ import { AppComponent } from './app.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [ DataBaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
